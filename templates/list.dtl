@@ -1,4 +1,27 @@
 {% extends "base.dtl" %}
 {% block content %}
-   <h1>I'm a list</h1>
+<div class="hero well">
+<h1><span id="example" rel="popover" data-content="{{ param.from }}" data-original-title="Hello">Directory List</span></h1>
+<h2>Root: {{ param.root }} </h2>
+</div>
+{% if param.dirs %}
+<div class="row">
+<div class="span4 well">
+<h2>Dirs</h2>
+ {% for d in param.dirs %}
+<p>{{ d }}</p>
+{% endfor %}
+</div>
+<div class="span4 well">
+<h2>Files</h2>
+ {% for f in param.files %}
+<p>{{ f }}</p>
+{% endfor %}
+</div>
+</div>
+{% endif %}
+<script>
+$("#example").popover();
+</script>
+
 {% endblock %}

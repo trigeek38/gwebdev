@@ -67,9 +67,9 @@
 <div class="span3">
   <div class="well" style="padding: 8px 0;">
     <ul class="nav nav-list">
-      <li class=""> <a href="/"><i class="icon-home"></i> Link</a></li>
+      <li class=""> <a href="/hello"><i class="icon-home"></i> Hello</a></li>
       <li class="divider"> </li>
-      <li> <a href="/"><i class="icon-folder-open"></i> Link</a> </li>
+      <li> <a href="/list"><i class="icon-folder-open"></i> List</a> </li>
     </ul>
   </div>
 </div>
@@ -77,7 +77,7 @@
 <div class="span9">
 
 {% block content %}
-   <h1>Hello {{ param }}</h1>
+   <h1>Hello {{ param.from }}</h1>
 {% endblock %}
 </div>
 </div>
