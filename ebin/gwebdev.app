@@ -2,7 +2,7 @@
              [{description,"gwebdev"},
               {vsn,"1"},
               {modules,[base_dtl,gwebdev,gwebdev_app,gwebdev_resource,
-                        gwebdev_sup]},
+                        gwebdev_sup,list_dtl]},
               {registered,[]},
               {applications,[kernel,stdlib,inets,crypto,mochiweb,webmachine]},
               {mod,{gwebdev_app,[]}},

@@ -11,5 +11,6 @@ init(State) -> {ok, State}.
 
 to_html(ReqData, State) ->
     From = proplists:get_value(from, State, "Jeff"),
-    {ok, Content} = base_dtl:render([{param, From}]),
+    Template = proplists:get_value(template, State, base_dtl),
+    {ok, Content} = Template:render([{param, From}]),
     {Content, ReqData, State}.

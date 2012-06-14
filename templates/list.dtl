@@ -1,0 +1,4 @@
+{% extends "base.dtl" %}
+{% block content %}
+   <h1>I'm a list</h1>
+{% endblock %}
