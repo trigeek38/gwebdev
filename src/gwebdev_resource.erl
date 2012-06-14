@@ -11,4 +11,5 @@ init(State) -> {ok, State}.
 
 to_html(ReqData, State) ->
     From = proplists:get_value(from, State, "Jeff"),
-    {"<html><body>Hello, " ++ From ++ " new world</body></html>", ReqData, State}.
+    {ok, Content} = base_dtl:render([{param, From}]),
+    {Content, ReqData, State}.

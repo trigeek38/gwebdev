@@ -1,4 +1,5 @@
 deps/*
+ebin/*
 priv/log/*
 *.beam
 .eunit/*
