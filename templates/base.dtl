@@ -70,6 +70,7 @@
       <li class=""> <a href="/hello"><i class="icon-home"></i> Hello</a></li>
       <li class="divider"> </li>
       <li> <a href="/list"><i class="icon-folder-open"></i> List</a> </li>
+      <li> <a href="/list2"><i class="icon-folder-open"></i> Json List</a> </li>
     </ul>
   </div>
 </div>

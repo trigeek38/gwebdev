@@ -1,0 +1,33 @@
+{% extends "base.dtl" %}
+
+{% block content %}
+<div class="hero well">
+<h1><span id="example" rel="popover" data-content="{{ param.from }}" data-original-title="Hello">Directory List2</span></h1>
+<h2>Root: {{ param.root }} </h2>
+</div>
+<div class="row">
+<div class="span4 well" id="list2">
+</div>
+</div>
+
+<script>
+
+$.getJSON('/json', function(data) {
+  var items = [];
+  $.each(data, function(key, val) {
+    items.push('<li id="' + key + '">' + key + '</li>');
+    items.push('<ul>');
+        $.each(val, function(k,v) {
+            items.push('<li>' + k + ' - ' + v + '</li>');
+        });
+    items.push('</ul>');
+  });
+  var mylist = items.join('')
+  $('#list2').html(mylist)
+});
+
+$("#example").popover();
+
+</script>
+{% endblock %}
+
