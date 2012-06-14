@@ -7,7 +7,8 @@
 
 -include_lib("webmachine/include/webmachine.hrl").
 
-init([]) -> {ok, undefined}.
+init(State) -> {ok, State}.
 
 to_html(ReqData, State) ->
-    {"<html><body>Hello, new world</body></html>", ReqData, State}.
+    From = proplists:get_value(from, State, "Jeff"),
+    {"<html><body>Hello, " ++ From ++ " new world</body></html>", ReqData, State}.

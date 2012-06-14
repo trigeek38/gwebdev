@@ -1,4 +1,5 @@
 deps/*
+priv/log/*
 *.beam
 .eunit/*
 *.swp
