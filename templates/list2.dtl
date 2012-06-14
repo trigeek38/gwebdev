@@ -15,11 +15,13 @@
 $.getJSON('/json', function(data) {
   var items = [];
   $.each(data, function(key, val) {
+    items.push('<ul>');
     items.push('<li id="' + key + '">' + key + '</li>');
     items.push('<ul>');
         $.each(val, function(k,v) {
             items.push('<li>' + k + ' - ' + v + '</li>');
         });
+    items.push('</ul>');
     items.push('</ul>');
   });
   var mylist = items.join('')
