@@ -1,0 +1,20 @@
+{% extends "base.dtl" %}
+{% block content %}
+<div class="hero well">
+  <h1>Dispatch Elements </span></h1>
+</div>
+<div class="row">
+  <div class="span8 well">
+    <h2>WRQ:PATH</h2>
+    <p>{{ path }}</p>
+    <h2>WRQ:DISP_PATH</h2>
+    <p>{{ disp_path }}</p>
+    <h2>WRQ:PATH_INFO</h2>
+    <p>{{ path_info }}</p>
+    <h2>WRQ:PATH_TOKENS</h2>
+    <p>[{% for t in tokens %}{{ t }}{% if not forloop.last %},{% endif %} {% endfor %}]</p>
+    <h2>WRQ:get_qs_value("name", ReqData)</h2>
+    <p>{{ qs }}</p>
+  </div>
+</div>
+{% endblock %}

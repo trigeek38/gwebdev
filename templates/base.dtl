@@ -71,6 +71,7 @@
       <li class="divider"> </li>
       <li> <a href="/list"><i class="icon-folder-open"></i> List</a> </li>
       <li> <a href="/list2"><i class="icon-folder-open"></i> Json List</a> </li>
+      <li> <a href="/path/"><i class="icon-folder-open"></i> Path Example</a> </li>
     </ul>
   </div>
 </div>
