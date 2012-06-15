@@ -24,7 +24,7 @@
 
 init(ConfigProps) ->
     {root, Root} = proplists:lookup(root, ConfigProps),
-    {ok, #context{root=Root}}.
+    {{trace, "/home/jbell/gwebdev/gwebdev/priv/log"}, #context{root=Root}}.
     
 allowed_methods(ReqData, Context) ->
     {['HEAD', 'GET', 'PUT', 'DELETE', 'POST'], ReqData, Context}.
