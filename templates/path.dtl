@@ -15,6 +15,8 @@
     <p>[{% for t in tokens %}{{ t }}{% if not forloop.last %},{% endif %} {% endfor %}]</p>
     <h2>WRQ:get_qs_value("name", ReqData)</h2>
     <p>{{ qs }}</p>
+    <h2>WRQ:req_qs(ReqData)</h2>
+    <p>{{ qs_all }}</p>
   </div>
 </div>
 {% endblock %}

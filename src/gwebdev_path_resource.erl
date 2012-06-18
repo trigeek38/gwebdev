@@ -22,4 +22,5 @@ get_param(ReqData) ->
     PathInfo = dict:to_list(wrq:path_info(ReqData)),
     Tokens = wrq:path_tokens(ReqData),
     QS = wrq:get_qs_value("name", ReqData),
-    [{path, Path}, {disp_path, DispPath}, {path_info, PathInfo}, {tokens, Tokens}, {qs, QS}].
+    QS_ALL = wrq:req_qs(ReqData),
+    [{path, Path}, {disp_path, DispPath}, {path_info, PathInfo}, {tokens, Tokens}, {qs, QS}, {qs_all, QS_ALL}].
