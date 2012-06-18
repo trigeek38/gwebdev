@@ -1,11 +1,18 @@
 -module(gwebdev_stream_resource).
--export([init/1, allowed_methods/2, process_post/2]).
+-export([init/1, allowed_methods/2, to_html/2, process_post/2]).
 
 -include_lib("webmachine/include/webmachine.hrl").
 
 init([]) -> {ok, undefined}.
 
-allowed_methods(ReqData, State) -> {['POST'], ReqData, State}.
+allowed_methods(ReqData, State) -> {['POST', 'GET'], ReqData, State}.
+
+to_html(ReqData, State) ->
+    Content = "<html><body><form method='POST' action='/stream/'>
+               <input type='text' value='123456789'>
+               <input type='submit'>
+               </form></body></html>",
+    {Content, ReqData, State}. 
 
 process_post(ReqData, State) ->
     Body = get_streamed_body(wrq:stream_req_body(ReqData, 3), []),
